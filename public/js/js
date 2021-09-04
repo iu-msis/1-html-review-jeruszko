@@ -1,0 +1,2 @@
+var element = document.getElementById('element');
+element.classList.add('class-1');
