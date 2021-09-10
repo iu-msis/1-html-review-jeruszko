@@ -1,8 +1,8 @@
 version: "3"
 services:
-  msis-salary:
+  app:
     build: .
     ports:
       - "8080:80"
     volumes:
-      - ./public:/var/www/html
+      - ./app/public:/srv/app/public
