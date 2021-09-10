@@ -1,6 +1,6 @@
 FROM php:7.4-apache
 
-LABEL maintainer = "Jack Ruszkowski"
+LABEL maintainer="Jack Ruszkowski"
 
 #Copy our public folder to the working directory 
 
