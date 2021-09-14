@@ -35,7 +35,8 @@
 <p>Hello, here is a table with great books I have enjoyed! Feel free to add your own book!</p>
 </div>
   <div class="white padding notranslate padding-16" >
-    <table id="customers">
+    <table id="tableTask">
+      <thead>
         <tr>
           <th>Title</th>
           <th>Authors</th>
@@ -44,6 +45,7 @@
           <th>Page Count</th>
           <th>MSRP</th>
         </tr>
+      </thead>
         <tr>
           <td>The Alchemist</td>
           <td>Paulo Coelho</td>
@@ -84,7 +86,7 @@
             <td>182</td>
             <td>$5.99</td>
         </tr>
-        <tr>
+        <!--<tr>  //Commented out code that is not specific to assignment - also messed up my sort. Will correct as assignments progress
             <form>
                 <td>
                 <div class="form-row">
@@ -129,10 +131,14 @@
                 </div>
             </td>
               </form>
-        </tr>
+        </tr>-->
       </table>
   </div>
-
+  <script src='js/tablesort.min.js'></script><!--table sort plugin-->
+  <script>
+    new Tablesort(document.getElementById('tableTask'));
+  </script>
+  </body>
 <!-- Footer wit Bootstrap that I used-->
 <!-- Mark Otto, Jacob Thornton. “Colored Links.” · Bootstrap v5.0, getbootstrap.com/docs/5.0/helpers/colored-links/. -->
 <!-- “HTML Links.” HTML Links Hyperlinks, www.w3schools.com/html/html_links.asp. -->
@@ -140,8 +146,8 @@
     <div style="text-align:center" class="p-3 mb-2 bg-info text-white">
       <p class="text-danger">Contact me for further information at </p><a href="http://ruszkowski.org/index.htm" class="alert alert-info"> my website.</a>
     </div>
-  </footer>
+</footer>
 
-</body>
+
 </html>
 <!DOCTYPE html>

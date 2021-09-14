@@ -1,5 +1,5 @@
 
-html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit} /*id selector for table - line 48
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{
     -ms-text-size-adjust:100%;
@@ -45,7 +45,7 @@ body{
     cursor:pointer;
     white-space:nowrap
 }
-table {
+#tableTask {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
@@ -136,4 +136,37 @@ table {
     width: 50%;
     border: 3px solid green;
     padding: 10px;
+  }
+  th[role=columnheader]:not(.no-sort) {
+    cursor: pointer;
+  }
+  
+  th[role=columnheader]:not(.no-sort):after {
+    content: '';
+    float: right;
+    margin-top: 7px;
+    border-width: 0 4px 4px;
+    border-style: solid;
+    border-color: #404040 transparent;
+    visibility: hidden;
+    opacity: 0;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  th[aria-sort=ascending]:not(.no-sort):after {
+    border-bottom: none;
+    border-width: 4px 4px 0;
+  }
+  
+  th[aria-sort]:not(.no-sort):after {
+    visibility: visible;
+    opacity: 0.4;
+  }
+  
+  th[role=columnheader]:not(.no-sort):hover:after {
+    visibility: visible;
+    opacity: 1;
   }
