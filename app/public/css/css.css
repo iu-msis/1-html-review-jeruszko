@@ -29,7 +29,7 @@ body{
 .hide-small{
     display:none!important
 }
-.button{
+#button{
     color:#000!important;
     background-color:#f1f1f1!important; 
     display:block;width:100%;
