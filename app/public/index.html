@@ -31,7 +31,7 @@
 
 
   <!-- About Section -->
-  <div class="container padding-32" id="about">
+  <div id="about" class="container padding-32" >
     <h3 class="-border-bottom border-light-grey padding-16">About</h3>
     <div class = "head">
       <a href="img/Headshot.jpg"  target="_blank"><img class = "heading" src="img/Headshot.jpg"></a>
@@ -41,10 +41,10 @@
     </p>
   </div>
 
-  <div class="row-padding grayscale">
+  <div id = "randUser" class="row-padding grayscale" >
     <div class="col l3 m6 margin-bottom">
       <h3>Name</h3>
-      <p class="w3-opacity">Jack Ruszkowski</p>
+      <!--<p class="w3-opacity">--> {{ results.name}} 
       <p><a class="button" href="mailto: jack@ruszkowski.org">Contact</a></p>
     </div>
     <div class="w3-col l3 m6 margin-bottom">
@@ -73,6 +73,11 @@
     <p> Here is an awesome scholarship foundation that I am apart of.
     </p>
   </div>
+  <script src='js/rand-user.js'></script><!--randuser plugin-->
+  <script>
+    new Rand(document.getElementById('randUser'));
+    </script>
+</body>
 
 <!-- Footer wit Bootstrap that I used-->
 <!-- Mark Otto, Jacob Thornton. “Colored Links.” · Bootstrap v5.0, getbootstrap.com/docs/5.0/helpers/colored-links/. -->
@@ -83,6 +88,5 @@
   </div>
 </footer>
 
-</body>
 </html>
 <!DOCTYPE html>
