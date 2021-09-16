@@ -67,7 +67,7 @@ const Rand = {
         fetch('https://randomuser.me/api/')
         .then( response => response.json())
         .then((parsedJson) => {
-            this.parsedJson = parsedJson.results[0]
+            this.results = parsedJson.results[0]
         })
         .catch ( err => 
             console.error(err))
