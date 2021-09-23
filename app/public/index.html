@@ -64,6 +64,9 @@
         <li>
           <a v-bind:href="'mailto:'+results.email">Email: {{ results.email }}</a>
         </li>
+        <form v-on:submit.prevent="fetchUserData">
+          <button type="submit">Refresh</button>
+        </form>
       </ul>
        
       <div class="col l3 m6 margin-bottom">

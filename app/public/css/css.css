@@ -29,7 +29,15 @@ body{
 .hide-small{
     display:none!important
 }
-#button{
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+/* #button{
     color:#000!important;
     background-color:#f1f1f1!important; 
     display:block;width:100%;
@@ -44,7 +52,7 @@ body{
     text-align:center;
     cursor:pointer;
     white-space:nowrap
-}
+} */
 #tableTask {
     font-family: arial, sans-serif;
     border-collapse: collapse;
