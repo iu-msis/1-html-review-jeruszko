@@ -2,6 +2,8 @@ FROM php:7.4-apache
 
 LABEL maintainer="Jack Ruszkowski"
 
+RUN docker-php-ext-install pdo_mysql
+
 #set our public folder to the working directory 
 WORKDIR /srv/app
 
