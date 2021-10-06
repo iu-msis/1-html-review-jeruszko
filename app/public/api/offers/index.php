@@ -6,12 +6,16 @@ require 'class/DbConnection.php';
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$sql = 'SELECT * FROM student';
+$sql = 'SELECT * FROM offer';
 $vars = [];
 
-if (isset($_GET['student'])) {
+if (isset($_GET['guid'])) {
   // This is an example of a parameterized query
-  $sql = 'SELECT * FROM student WHERE studentId = ?';
+  $sql = 'SELECT * FROM offer WHERE patientGuid = ?';
+
+  //Not this way!
+
+//$sql = 'SELECT * FROM offer WHERE studentId = ' $_GET['student'] SQL Injection - vulnerability
   $vars = [ $_GET['student'] ];
 }
 
