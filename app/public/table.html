@@ -36,7 +36,45 @@
   </div>
     <div class="white padding notranslate padding-16" >
 
-      <div  class="offerApp col col-8" >
+      <!-- student -->
+
+      <div id="booksApp" class="container">
+        <div class="row align-items-start">
+          <div class="col col-4">
+            <!-- <p>Profile information for {{ person.name.first }}</p> -->
+          </div>
+  
+          <div  class="col col-8" v-if="selectedStudent">
+            <h1>Offers for {{ selectedStudent.name }}</h1>
+  
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Salary</th>
+                  <th>Bonus</th>
+                  <th>Offer Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+                <tbody>
+                    <tr v-for="offer in offers">
+                        <td>{{ offer.companyName }}</td>
+                        <td>{{ prettyDollar(offer.salary) }}</td>
+                        <td>{{ prettyDollar(offer.bonus) }}</td>
+                        <td>{{ offer.offerDate }}</td>
+                    </tr>
+                </tbody>
+            </table>
+  
+  
+          </div>
+  
+        </div>
+  
+      </div>
+
+      <div  class="booksApp col col-8" >
         <h1>List of Books</h1>
 
         <table class="table">
@@ -51,13 +89,14 @@
             </tr>
           </thead>
             <tbody>
-                <tr v-for="book in book">
-                    <td>{{ books.title }}</td>
+                <tr v-for="offer in offers">
+                    <td>{{ offer.companyName }}</td>
                     <td>{{ books.author }}</td>
                     <td>{{ books.yearPublished }}</td>
                     <td>{{ books.publishingGroup }}</td>
                     <td>{{ books.numberOfPages }}</td>
                     <td>{{ prettyDollar(books.price) }}</td>
+                    
                 </tr>
             </tbody>
         </table>
@@ -112,7 +151,10 @@
             <td>Plain Label Books</td>
             <td>182</td>
             <td>$5.99</td>
-        </tr>
+        </tr> -->
+
+
+
         <!--<tr>  //Commented out code that is not specific to assignment - also messed up my sort. Will correct as assignments progress
             <form>
                 <td>
@@ -162,7 +204,7 @@
       </table>
     </div>
     <script src='js/tablesort.min.js'></script><!--table sort plugin-->
-    <script src='js/index.js'></script><!--table sort plugin-->
+    <script src='js/books.js'></script><!--table sort plugin-->
     <!-- Include sort types you need -->
 <script src='tablesort.number.js'></script>
 <script src='tablesort.date.js'></script>
