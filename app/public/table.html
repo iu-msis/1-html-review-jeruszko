@@ -35,6 +35,31 @@
   <p>Hello, here is a table with great books I have enjoyed! Feel free to add your own book!</p>
   </div>
     <div class="white padding notranslate padding-16" >
+
+      <div  class="col col-8" v-if="selectedStudent">
+        <h1>Offers for {{ selectedStudent.name }}</h1>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Authors</th>
+              <th>Year Published</th>
+             <th>Publisher</th>
+              <th>Page Count</th>
+              <th>MSRP</th>
+            </tr>
+          </thead>
+            <tbody>
+                <tr v-for="books in books">
+                    <td>{{ books.price }}</td>
+                    <td>{{ prettyDollar(books.price) }}</td>
+                    <td>{{ prettyDollar(offer.bonus) }}</td>
+                    <td>{{ offer.offerDate }}</td>
+                </tr>
+            </tbody>
+        </table>
+
       <table id="tableTask">
         <thead>
           <tr>

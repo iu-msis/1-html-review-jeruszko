@@ -8,6 +8,7 @@ html{
 body{
     margin:0
 }
+
 .heading{
     width: 400px;
     height: 550px;
@@ -23,6 +24,27 @@ body{
     z-index:1;
     top:0
 }
+body {}
+
+
+.student {
+    margin: 10px 2px;
+    padding: 4px;
+    border: 1px solid gray;
+    background-color: antiquewhite;
+}
+
+.selected {
+    background-color: burlywood;
+}
+
+.userName {
+    font-weight:bold;
+}
+
+.studentName{
+    color:#999;
+/* }
 .right{
     float:right!important
 }
@@ -177,4 +199,4 @@ body{
   th[role=columnheader]:not(.no-sort):hover:after {
     visibility: visible;
     opacity: 1;
-  }
+  } 

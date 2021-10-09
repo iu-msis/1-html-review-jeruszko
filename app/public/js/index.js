@@ -1,14 +1,12 @@
-const Offer = {
+const SomeApp = {
     data() {
       return {
-        "students": [],
+        students: [],
         selectedStudent: null,
-        "offers": []
-        }
+        offers: []
+      }
     },
-    computed: {
-        
-    },
+    computed: {},
     methods: {
         prettyData(d) {
             return dayjs(d)
@@ -48,11 +46,15 @@ const Offer = {
             .catch( (err) => {
                 console.error(err);
             })
+            .catch( (error) => {
+                console.error(error);
+            });
         }
     },
     created() {
         this.fetchStudentData();
-    } //end created
-} // end Offer config
+    }
   
-Vue.createApp(Offer).mount('#offerApp');
+  }
+  
+  Vue.createApp(SomeApp).mount('#offerApp');
