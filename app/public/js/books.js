@@ -1,4 +1,4 @@
-const SomeApp = {
+const BookApp = {
     data() {
       return {
         books: []
@@ -14,4 +14,4 @@ const SomeApp = {
   
   }
   
-  Vue.createApp(SomeApp).mount('#bookApp');
+  Vue.createApp(BookApp).mount('#bookApp');
