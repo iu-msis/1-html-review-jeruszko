@@ -49,8 +49,8 @@
           </div>
         </div>
 
-        <div  class="col col-8">
-          <h1>Table of Books</h1>
+        <div  class="col col-8" v-if="selectedStudent">
+          <h1>Offers for {{ selectedStudent.name }}</h1>
 
           <table class="table">
             <thead>

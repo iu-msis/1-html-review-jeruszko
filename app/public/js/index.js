@@ -3,7 +3,8 @@ const SomeApp = {
       return {
         students: [],
         selectedStudent: null,
-        offers: []
+        offers: [], 
+        books:[]
       }
     },
     computed: {},

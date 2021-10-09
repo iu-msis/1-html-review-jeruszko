@@ -36,8 +36,8 @@
   </div>
     <div class="white padding notranslate padding-16" >
 
-      <div  class="col col-8" v-if="selectedStudent">
-        <h1>Offers for {{ selectedStudent.name }}</h1>
+      <div  class="offerApp col col-8" >
+        <h1>List of Books</h1>
 
         <table class="table">
           <thead>
@@ -51,11 +51,13 @@
             </tr>
           </thead>
             <tbody>
-                <tr v-for="books in books">
-                    <td>{{ books.price }}</td>
+                <tr v-for="book in book">
+                    <td>{{ books.title }}</td>
+                    <td>{{ books.author }}</td>
+                    <td>{{ books.yearPublished }}</td>
+                    <td>{{ books.publishingGroup }}</td>
+                    <td>{{ books.numberOfPages }}</td>
                     <td>{{ prettyDollar(books.price) }}</td>
-                    <td>{{ prettyDollar(offer.bonus) }}</td>
-                    <td>{{ offer.offerDate }}</td>
                 </tr>
             </tbody>
         </table>
@@ -160,6 +162,7 @@
       </table>
     </div>
     <script src='js/tablesort.min.js'></script><!--table sort plugin-->
+    <script src='js/index.js'></script><!--table sort plugin-->
     <!-- Include sort types you need -->
 <script src='tablesort.number.js'></script>
 <script src='tablesort.date.js'></script>
