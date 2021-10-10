@@ -82,29 +82,6 @@
 
     </div>
 
-    <div id="offerApp">
-      <table class="table">
-            <thead>
-              <tr>
-                <th>Company</th>
-                <th>Salary</th>
-                <th>Bonus</th>
-                <th>Offer Date</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-              <tbody>
-                  <tr v-for="offer in offers">
-                      <td>{{ offer.companyName }}</td>
-                      <td>{{ prettyDollar(offer.salary) }}</td>
-                      <td>{{ prettyDollar(offer.bonus) }}</td>
-                      <td>{{ offer.offerDate }}</td>
-                  </tr>
-              </tbody>
-          </table>
-    </div>
-    
-
     <!--<script src='js/rand-user.js'></script>randuser plugin-->
     <!-- <script>
       new app(document.getElementById('#app'));
