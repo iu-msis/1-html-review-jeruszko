@@ -39,9 +39,9 @@
 
       <!-- books -->
       <div  id="bookApp" class="container">
-        <h1>List of Books {{ book.id }} </h1>
+        <h1>List of Books {{ books.id }} </h1>
 
-        <table class="table">
+        <table id="tableTask" class="table">
           <thead>
             <tr>
               <th>Title</th>
@@ -52,77 +52,22 @@
               <th>MSRP</th>
             </tr>
           </thead>
-            <tbody>
+          <tbody>
                 <tr v-for="book in books">
-                  <td>{{ books.title }}</td>
-                    <td>{{ books.author }}</td>
-                    <td>{{ books.yearPublished }}</td>
-                    <td>{{ books.publishingGroup }}</td>
-                    <td>{{ books.numberOfPages }}</td>
-                    <td>{{ prettyDollar(books.price) }}</td>
+                  <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.yearPublished }}</td>
+                    <td>{{ book.publishingGroup }}</td>
+                    <td>{{ book.numberOfPages }}</td>
+                    <td>{{ (book.price) }}</td>
                     
                 </tr>
-            </tbody>
+          </tbody>
         </table>
-</div>
-
-
-
-      <table id="tableTask">
-        <thead>
+      </div>
+      <div>
+        <table>
           <tr>
-            <th>Title</th>
-            <th>Authors</th>
-            <th>Year Published</th>
-            <th>Publisher</th>
-            <th>Page Count</th>
-            <th>MSRP</th>
-          </tr>
-        </thead>
-        <tr>
-          <td>The Alchemist</td>
-          <td>Paulo Coelho</td>
-          <td>1988</td>
-          <td>HarperOne</td>
-          <td>208</td>
-          <td>$11.99</td>
-        </tr>
-        <tr>
-            <td>Into the Wild</td>
-            <td>Jon Krakauer</td>
-            <td>2009</td>
-            <td>Knopf Doubleday Publishing Group</td>
-            <td>240</td>
-            <td>$12.99</td>
-        </tr>
-        <tr>
-            <td>The Outsiders</td>
-            <td>S. E. Hinton</td>
-            <td>2012</td>
-            <td>Penguin Young Readers Group</td>
-            <td>208</td>
-            <td>$9.99</td>
-        </tr>
-        <tr>
-            <td>The Great Gatsby</td>
-            <td>F. Scott Fitzgerald</td>
-            <td>2003</td>
-            <td>Charles Scribner's Sons</td>
-            <td>165</td>
-            <td>$1.99</td>
-        </tr>
-        <tr>
-            <td>The War of the Worlds</td>
-            <td>H.G. Wells</td>
-            <td>2003</td>
-            <td>Plain Label Books</td>
-            <td>182</td>
-            <td>$5.99</td>
-        </tr>
-
-
-
-        <!--<tr>  //Commented out code that is not specific to assignment - also messed up my sort. Will correct as assignments progress
             <form>
                 <td>
                 <div class="form-row">
@@ -167,15 +112,15 @@
                 </div>
             </td>
               </form>
-        </tr>-->
-      </table>
+      </table> 
+    </div>
     </div>
     <script src='js/tablesort.min.js'></script><!--table sort plugin-->
-    <script src='js/index.js'></script>
+    <!-- <script src='js/index.js'></script> -->
     <script src='js/books.js'></script><!--table sort plugin-->
     <!-- Include sort types you need -->
-<script src='tablesort.number.js'></script>
-<script src='tablesort.date.js'></script>
+<!-- <script src='tablesort.number.js'></script>
+<script src='tablesort.date.js'></script> -->
     <script>
     new Tablesort(document.getElementById('tableTask'));
     </script>
