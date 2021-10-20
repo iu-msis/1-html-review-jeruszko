@@ -5,6 +5,7 @@ const SomeApp = {
         selectedStudent: null,
         offers: [], 
         //books: []
+        bookForm: {}
       }
     },
     computed: {},

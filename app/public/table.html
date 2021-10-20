@@ -39,7 +39,7 @@
 
       <!-- books -->
       <div  id="bookApp" class="container">
-        <h1>List of Books {{ books.id }} </h1>
+        <h1>List of Books  </h1>
 
         <table id="tableTask" class="table">
           <thead>
@@ -64,55 +64,39 @@
                 </tr>
           </tbody>
         </table>
+
+        <div class="col col-8">
+
+          <form v-on:submit.prevent="postNewBook">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" v-model="bookForm.title"
+              class="form-control" id="title"> 
+            </div>
+            <div class="mb-3">
+              <label for="author" class="form-label">Author</label>
+              <input type="text" v-model="bookForm.author" class="form-control" id="author">
+            </div>
+            <div class="mb-3">
+              <label for="yearPublished" class="form-label">Year Published</label>
+              <input type="number" v-model="bookForm.yearPublished" class="form-control" id="yearPublished">
+            </div>
+            <div class="mb-3">
+              <label for="publishingGroup" class="form-label">Publishing Group</label>
+              <input type="text" v-model="bookForm.publishingGroup" class="form-control" id="publishingGroup">
+            </div>
+            <div class="mb-3">
+              <label for="numberOfPages" class="form-label">Number Of Pages</label>
+              <input type="number" v-model="bookForm.numberOfPages" class="form-control" id="numberOfPages">
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="number" v-model="bookForm.price" class="form-control" id="price">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
-      <div>
-        <table>
-          <tr>
-            <form>
-                <td>
-                <div class="form-row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Enter Title">
-                  </div>
-                </div>
-            </td>
-            <td>
-                <div class="form-row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Enter Author">
-                  </div>
-                </div>
-            </td>
-            <td>
-                <div class="form-row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Enter Year Puublished">
-                  </div>
-                </div>
-            </td>
-            <td>
-                <div class="form-row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Enter Publisher">
-                  </div>
-                </div>
-            </td>
-            <td>
-                <div class="form-row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Enter Year Publsihed">
-                  </div>
-                </div>
-            </td>
-            <td>
-                <div class="form-row">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Enter MSRP">
-                  </div>
-                </div>
-            </td>
-              </form>
-      </table> 
+
     </div>
     </div>
     <script src='js/tablesort.min.js'></script><!--table sort plugin-->
